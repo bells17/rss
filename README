@@ -1,0 +1,17 @@
+== Install
+
+
+```
+rbenv install -v 2.2.0
+rbenv global 2.2.0
+gem install bundler
+bundle install --path vendor/bundler
+bundle exec rake db:create
+bundle exec rake db:migrate
+```
+
+== Run
+
+```
+rails server
+```
