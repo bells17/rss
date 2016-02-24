@@ -1,7 +1,10 @@
 class HomeController < BaseController
   def index
-    p "aaaaaaaaaaaaaaaaa"
-    p Settings
-    p Settings.twitter.consumer_key
+    urls = ['https://www.nxsw.co.jp/feed/']    
+    feeds = urls.map do |url|
+      Feedjira::Feed.fetch_and_parse url
+    end
+    @data = { :feeds => feeds }
+    p @data
   end
 end

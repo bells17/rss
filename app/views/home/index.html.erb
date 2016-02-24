@@ -1,2 +1,18 @@
 <h1>Home#index</h1>
 <p>Find me in app/views/home/index.html.erb</p>
+
+<h2>Feeds</h2>
+
+<div>
+  <% @data[:feeds].each do |feed| %>
+    <h3>Title: <%= feed.title %></h3>
+    <h3>URL: <%= feed.url %></h3>
+    <ul>
+      <% feed.entries.each do |entry| %>
+        <li>
+          <a href="<%= entry.url %>"><%= entry.title %></a>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
