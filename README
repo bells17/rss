@@ -13,5 +13,11 @@ bundle exec rake db:migrate
 == Run
 
 ```
-rails server
+bundle exec rails server
+```
+
+== Tasks
+
+```
+bundle exec rake [task]
 ```

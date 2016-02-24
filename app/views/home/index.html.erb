@@ -10,7 +10,8 @@
     <ul>
       <% feed.entries.each do |entry| %>
         <li>
-          <a href="<%= entry.url %>"><%= entry.title %></a>
+          <a href="<%= entry.url %>"><%= entry.title %></a> - <span><%= entry.summary %></span>
+          <img src="https://farm8.staticflickr.com/7545/15973514551_eafdeef504_c.jpg">
         </li>
       <% end %>
     </ul>
